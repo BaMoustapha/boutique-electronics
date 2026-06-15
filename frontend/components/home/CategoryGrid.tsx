@@ -39,7 +39,7 @@ export function CategoryGrid() {
     return (
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {Array.from({ length: 8 }).map((_, i) => (
-          <div key={i} className="h-36 sm:h-40 bg-surface-alt rounded-lg animate-pulse" />
+          <div key={i} className="h-40 sm:h-44 bg-surface-alt rounded-lg animate-pulse" />
         ))}
       </div>
     )
@@ -55,7 +55,7 @@ export function CategoryGrid() {
           <Link
             key={cat.id}
             href={`/catalogue/${cat.slug}`}
-            className="group relative h-36 sm:h-40 rounded-lg overflow-hidden block"
+            className="group relative h-40 sm:h-44 rounded-lg overflow-hidden block"
             style={!imageUrl ? { backgroundColor: color } : undefined}
           >
             {/* Background image */}

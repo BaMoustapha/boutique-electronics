@@ -24,13 +24,8 @@ export default function HomePage() {
         <HeroBanner />
       </div>
 
-      {/* SocialProofBar — dark card */}
-      <div className="max-w-7xl mx-auto px-4 py-6">
-        <SocialProofBar />
-      </div>
-
-      {/* TrustBanner — white */}
-      <div className="max-w-7xl mx-auto px-4 pb-8">
+      {/* TrustBanner — white, contraste immédiat après le hero sombre */}
+      <div className="max-w-7xl mx-auto px-4 py-5">
         <TrustBanner />
       </div>
 
@@ -66,9 +61,12 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* BrandsSlider — dark full-width band */}
+      {/* SocialProofBar + BrandsSlider — dark full-width band combiné */}
       <div className="bg-text-primary">
-        <div className="max-w-7xl mx-auto px-4 py-10">
+        <div className="max-w-7xl mx-auto px-4 pt-10 pb-6">
+          <SocialProofBar />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 pb-10">
           <BrandsSlider variant="dark" />
         </div>
       </div>

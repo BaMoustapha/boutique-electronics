@@ -4,16 +4,10 @@ import { ArrowRight, Zap } from 'lucide-react'
 export function PromoBanner() {
   return (
     <div className="relative rounded-xl overflow-hidden bg-[#1A1A2E]">
-      {/* Bande rouge diagonale signature */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'repeating-linear-gradient(-55deg, #E63946 0px, #E63946 12px, transparent 12px, transparent 32px)',
-          opacity: 0.12,
-        }}
-      />
-      {/* Bloc rouge plein à droite */}
-      <div className="absolute top-0 right-0 bottom-0 w-2/5 bg-[#E63946] hidden sm:block" style={{ clipPath: 'polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)' }} />
+      {/* Bloc rouge à droite */}
+      <div className="absolute top-0 right-0 bottom-0 w-2/5 bg-[#E63946] hidden sm:block" style={{ clipPath: 'polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)' }} />
+      {/* Subtil halo rouge en fond gauche */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 10% 50%, rgba(230,57,70,0.12) 0%, transparent 60%)' }} />
 
       <div className="relative flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-6">
         {/* Gauche : texte */}

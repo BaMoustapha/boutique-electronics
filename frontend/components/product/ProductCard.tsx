@@ -138,7 +138,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <WhatsAppButton
           product={product}
           size="sm"
-          variant="outline"
+          variant="solid"
           fullWidth
           label="Commander"
           className="mt-1 rounded-md"

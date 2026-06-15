@@ -36,7 +36,7 @@ export function BestSellers() {
 
       <div className="relative">
         {/* Fade hint on right edge to signal scrollability */}
-        <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#F8F9FA] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#F1F3F5] to-transparent z-10 pointer-events-none" />
 
         <div className="flex gap-3 overflow-x-auto pb-1 scrollbar-hide scroll-smooth">
           {isLoading
