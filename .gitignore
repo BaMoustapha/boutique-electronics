@@ -1,0 +1,52 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtualenvs
+venv/
+.venv/
+env/
+.env/
+
+# Secrets — NE JAMAIS COMMITER
+backend/.env
+frontend/.env.local
+frontend/.env*.local
+
+# SQLite
+backend/db.sqlite3
+
+# Static / media
+backend/staticfiles/
+backend/media/
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Docs internes / Claude
+CLAUDE.md
+docs/
+
+# Logs
+*.log
+npm-debug.log*
