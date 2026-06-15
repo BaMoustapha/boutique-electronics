@@ -180,15 +180,6 @@ export function Navbar() {
               </Link>
             )}
 
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:flex items-center gap-2 ml-2 h-9 px-4 bg-whatsapp hover:bg-whatsapp-dark text-white text-sm font-semibold rounded-md transition-colors font-display"
-            >
-              <MessageCircle size={16} />
-              Commander
-            </a>
           </div>
         </div>
 
