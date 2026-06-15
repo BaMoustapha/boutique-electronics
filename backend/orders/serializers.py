@@ -24,12 +24,26 @@ class OrderItemReadSerializer(serializers.ModelSerializer):
 
 
 class OrderReadSerializer(serializers.ModelSerializer):
+    """Serializer complet — réservé aux endpoints authentifiés."""
     items = OrderItemReadSerializer(many=True, read_only=True)
 
     class Meta:
         model  = Order
         fields = [
             'id', 'order_number', 'customer_name', 'customer_phone', 'customer_email',
+            'delivery_zone', 'delivery_address', 'note', 'status', 'total_amount',
+            'items', 'created_at',
+        ]
+
+
+class OrderReadPublicSerializer(serializers.ModelSerializer):
+    """Serializer public — retire customer_email pour limiter l'exposition PII."""
+    items = OrderItemReadSerializer(many=True, read_only=True)
+
+    class Meta:
+        model  = Order
+        fields = [
+            'id', 'order_number', 'customer_name', 'customer_phone',
             'delivery_zone', 'delivery_address', 'note', 'status', 'total_amount',
             'items', 'created_at',
         ]

@@ -5,7 +5,7 @@ from rest_framework.permissions import AllowAny
 
 from products.models import Product
 from .models import Order, OrderItem
-from .serializers import OrderCreateSerializer, OrderReadSerializer
+from .serializers import OrderCreateSerializer, OrderReadSerializer, OrderReadPublicSerializer
 from .emails import send_order_notification, send_order_confirmation_to_customer
 
 
@@ -80,4 +80,4 @@ class OrderDetailView(APIView):
             order = Order.objects.prefetch_related('items').get(order_number=order_number)
         except Order.DoesNotExist:
             return Response({'detail': 'Commande introuvable.'}, status=status.HTTP_404_NOT_FOUND)
-        return Response(OrderReadSerializer(order).data)
+        return Response(OrderReadPublicSerializer(order).data)

@@ -56,9 +56,6 @@ export default function ConfirmationPage({ params }: Props) {
         <p className="text-gray-500 text-sm">
           Nous vous contacterons au <strong>{order.customer_phone}</strong> pour confirmer et organiser la livraison.
         </p>
-        {order.customer_email && (
-          <p className="text-gray-400 text-xs mt-1">Un email de confirmation a été envoyé à {order.customer_email}.</p>
-        )}
       </div>
 
       {/* Numéro commande */}
