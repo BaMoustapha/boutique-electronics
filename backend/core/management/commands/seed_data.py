@@ -7,6 +7,7 @@ Images :
 - unsplash : images produit generiques fiables
 """
 import urllib.request
+import cloudinary.uploader
 from django.core.management.base import BaseCommand
 from django.core.files.base import ContentFile
 from django.utils.text import slugify
@@ -1613,7 +1614,7 @@ SAMPLE_PRODUCTS = [
 ]
 
 
-def download_image(url: str, filename: str):
+def download_image(url: str) -> bytes | None:
     try:
         req = urllib.request.Request(
             url,
@@ -1621,9 +1622,20 @@ def download_image(url: str, filename: str):
         )
         with urllib.request.urlopen(req, timeout=15) as resp:
             data = resp.read()
-        if len(data) < 1000:
-            return None
-        return ContentFile(data, name=filename)
+        return data if len(data) >= 1000 else None
+    except Exception:
+        return None
+
+
+def upload_image(data: bytes, public_id: str, folder: str) -> str | None:
+    try:
+        result = cloudinary.uploader.upload(
+            data,
+            public_id=public_id,
+            folder=folder,
+            overwrite=True,
+        )
+        return result.get('public_id', '')
     except Exception:
         return None
 
@@ -1651,12 +1663,17 @@ class Command(BaseCommand):
                 self.stdout.write(f'  {parent.name}')
 
             if image_url and not parent.image:
-                content = download_image(image_url, f'{parent.slug}.jpg')
-                if content:
-                    parent.image.save(f'{parent.slug}.jpg', content, save=True)
-                    self.stdout.write(self.style.SUCCESS(f'    Image OK'))
+                data = download_image(image_url)
+                if data:
+                    public_id = upload_image(data, parent.slug, 'categories')
+                    if public_id:
+                        parent.image = public_id
+                        parent.save(update_fields=['image'])
+                        self.stdout.write(self.style.SUCCESS(f'    Image OK'))
+                    else:
+                        self.stdout.write(self.style.WARNING(f'    Image ECHEC (Cloudinary)'))
                 else:
-                    self.stdout.write(self.style.WARNING(f'    Image ECHEC'))
+                    self.stdout.write(self.style.WARNING(f'    Image ECHEC (download)'))
 
             for child_data in children:
                 child, created = Category.objects.get_or_create(
@@ -1678,12 +1695,17 @@ class Command(BaseCommand):
             if created:
                 self.stdout.write(f'  {name}')
             if not brand.logo and b.get('logo_url'):
-                content = download_image(b['logo_url'], f'{slug}.png')
-                if content:
-                    brand.logo.save(f'{slug}.png', content, save=True)
-                    self.stdout.write(self.style.SUCCESS(f'    Logo OK'))
+                data = download_image(b['logo_url'])
+                if data:
+                    public_id = upload_image(data, slug, 'brands')
+                    if public_id:
+                        brand.logo = public_id
+                        brand.save(update_fields=['logo'])
+                        self.stdout.write(self.style.SUCCESS(f'    Logo OK'))
+                    else:
+                        self.stdout.write(self.style.WARNING(f'    Logo ECHEC (Cloudinary) : {name}'))
                 else:
-                    self.stdout.write(self.style.WARNING(f'    Logo ECHEC : {name}'))
+                    self.stdout.write(self.style.WARNING(f'    Logo ECHEC (download) : {name}'))
 
     def _create_products(self):
         for p in SAMPLE_PRODUCTS:
@@ -1714,10 +1736,19 @@ class Command(BaseCommand):
                 self._add_image(product, p['image_url'])
 
     def _add_image(self, product, image_url):
-        content = download_image(image_url, f'{product.slug}.jpg')
-        if content:
-            img = ProductImage(product=product, is_primary=True, order=0, alt_text=product.name)
-            img.image.save(f'{product.slug}.jpg', content, save=True)
-            self.stdout.write(self.style.SUCCESS(f'    Image OK'))
+        data = download_image(image_url)
+        if data:
+            public_id = upload_image(data, product.slug, 'products')
+            if public_id:
+                ProductImage.objects.create(
+                    product=product,
+                    image=public_id,
+                    is_primary=True,
+                    order=0,
+                    alt_text=product.name,
+                )
+                self.stdout.write(self.style.SUCCESS(f'    Image OK'))
+            else:
+                self.stdout.write(self.style.WARNING(f'    Image ECHEC (Cloudinary) : {product.name}'))
         else:
-            self.stdout.write(self.style.WARNING(f'    Image ECHEC : {product.name}'))
+            self.stdout.write(self.style.WARNING(f'    Image ECHEC (download) : {product.name}'))
