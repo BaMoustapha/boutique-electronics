@@ -61,9 +61,12 @@ export default function CommanderPage() {
 
   const onSubmit = (data: FormData) => {
     createOrder({
-      ...data,
-      customer_email: data.customer_email || '',
-      note: data.note || '',
+      customer_name:    data.customer_name,
+      customer_phone:   data.customer_phone,
+      customer_email:   data.customer_email || '',
+      delivery_zone:    data.delivery_zone,
+      delivery_address: data.delivery_address,
+      note:             data.note || '',
       items: items.map((i) => ({ product_id: i.product.id, quantity: i.quantity })),
     })
   }
