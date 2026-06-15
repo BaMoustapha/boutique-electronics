@@ -77,14 +77,30 @@ CATEGORIES = [
 ]
 
 BRANDS = [
-    'Samsung', 'Apple', 'Huawei', 'Xiaomi', 'Tecno',
-    'Infinix', 'itel', 'LG', 'Hisense', 'Sony',
-    'HP', 'Lenovo', 'Asus', 'Acer', 'Dell',
-    'JBL', 'Philips', 'Bosch', 'Whirlpool', 'Haier', 'Midea',
-    'Microsoft', 'Nintendo',
+    {'name': 'Samsung',   'is_featured': True,  'logo_url': 'https://logo.clearbit.com/samsung.com'},
+    {'name': 'Apple',     'is_featured': True,  'logo_url': 'https://logo.clearbit.com/apple.com'},
+    {'name': 'Huawei',    'is_featured': False, 'logo_url': 'https://logo.clearbit.com/huawei.com'},
+    {'name': 'Xiaomi',    'is_featured': True,  'logo_url': 'https://logo.clearbit.com/xiaomi.com'},
+    {'name': 'Tecno',     'is_featured': True,  'logo_url': 'https://logo.clearbit.com/tecno-mobile.com'},
+    {'name': 'Infinix',   'is_featured': False, 'logo_url': 'https://logo.clearbit.com/infinixmobility.com'},
+    {'name': 'itel',      'is_featured': False, 'logo_url': 'https://logo.clearbit.com/itel-mobile.com'},
+    {'name': 'LG',        'is_featured': True,  'logo_url': 'https://logo.clearbit.com/lg.com'},
+    {'name': 'Hisense',   'is_featured': True,  'logo_url': 'https://logo.clearbit.com/hisense.com'},
+    {'name': 'Sony',      'is_featured': False, 'logo_url': 'https://logo.clearbit.com/sony.com'},
+    {'name': 'HP',        'is_featured': True,  'logo_url': 'https://logo.clearbit.com/hp.com'},
+    {'name': 'Lenovo',    'is_featured': False, 'logo_url': 'https://logo.clearbit.com/lenovo.com'},
+    {'name': 'Asus',      'is_featured': False, 'logo_url': 'https://logo.clearbit.com/asus.com'},
+    {'name': 'Acer',      'is_featured': False, 'logo_url': 'https://logo.clearbit.com/acer.com'},
+    {'name': 'Dell',      'is_featured': False, 'logo_url': 'https://logo.clearbit.com/dell.com'},
+    {'name': 'JBL',       'is_featured': False, 'logo_url': 'https://logo.clearbit.com/jbl.com'},
+    {'name': 'Philips',   'is_featured': False, 'logo_url': 'https://logo.clearbit.com/philips.com'},
+    {'name': 'Bosch',     'is_featured': False, 'logo_url': 'https://logo.clearbit.com/bosch.com'},
+    {'name': 'Whirlpool', 'is_featured': False, 'logo_url': 'https://logo.clearbit.com/whirlpool.com'},
+    {'name': 'Haier',     'is_featured': True,  'logo_url': 'https://logo.clearbit.com/haier.com'},
+    {'name': 'Midea',     'is_featured': False, 'logo_url': 'https://logo.clearbit.com/midea.com'},
+    {'name': 'Microsoft', 'is_featured': False, 'logo_url': 'https://logo.clearbit.com/microsoft.com'},
+    {'name': 'Nintendo',  'is_featured': False, 'logo_url': 'https://logo.clearbit.com/nintendo.com'},
 ]
-
-FEATURED_BRANDS = ['Samsung', 'Apple', 'Xiaomi', 'Tecno', 'LG', 'HP', 'Haier', 'Hisense']
 
 SAMPLE_PRODUCTS = [
 
@@ -99,7 +115,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://nova.sn/34321-home_default/samsung-galaxy-z-flip-6-12-go-de-ram-memoire-256-go.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&h=400&fit=crop&q=80',
         'description': 'Samsung Galaxy Z Flip 6 pliable avec ecran Dynamic AMOLED 6.7 pouces, Snapdragon 8 Gen 3, 12 Go RAM et appareil photo 50 MP.',
         'specifications': {
             'Ecran': '6.7 pouces Dynamic AMOLED 2X 120Hz (pliable)',
@@ -250,7 +266,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://nova.sn/34000-home_default/redmi-a3x-memoire-64-go-ram-3-go-ecran-671.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1567581935884-3349723552ca?w=400&h=400&fit=crop&q=80',
         'description': 'Redmi A3x : smartphone economique avec ecran 6.71 pouces et batterie 5000 mAh longue duree.',
         'specifications': {
             'Ecran': '6.71 pouces HD+', 'Processeur': 'Helio G36',
@@ -269,7 +285,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://nova.sn/34118-home_default/tecno-pop-9-memoire-64-go-ram-3-go-ecran-667-pouces.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop&q=80',
         'description': 'Tecno POP 9 avec ecran 6.67 pouces HD+ 90Hz, appareil photo IA et batterie 5000 mAh. Meilleur rapport qualite/prix.',
         'specifications': {
             'Ecran': '6.67 pouces HD+ 90Hz', 'Processeur': 'Helio A22',
@@ -288,7 +304,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://nova.sn/34424-home_default/tecno-pop-9-memoire-64-go-ram-3-go-ecran-667-pouces.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop&q=80',
         'description': 'Tecno Spark 30c 128 Go avec ecran AMOLED 6.6 pouces 90Hz, Helio G85 et charge 18W.',
         'specifications': {
             'Ecran': '6.6 pouces AMOLED 90Hz', 'Processeur': 'Helio G85',
@@ -477,7 +493,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://nova.sn/41278-home_default/lenovo-ideapad-slim-3-pc-portable-14-core-i5-16-go-ram-512-go-ssd.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop&q=80',
         'description': 'Lenovo IdeaPad Slim 3 14 pouces avec Intel Core i5, 16 Go RAM et SSD 512 Go. Ultra-fin et performant pour travail et etudes.',
         'specifications': {
             'Ecran': '14 pouces FHD IPS', 'Processeur': 'Intel Core i5 (12e gen)',
@@ -578,7 +594,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://nova.sn/41644-home_default/lenovo-yoga-tab-plus-127-3k-16-go-ram-256-go-clavier-et-stylet.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop&q=80',
         'description': 'Lenovo Yoga Tab Plus 12.7 pouces ecran 3K, 16 Go RAM, 256 Go, avec clavier et stylet inclus. La tablette pro ultime.',
         'specifications': {
             'Ecran': '12.7 pouces 3K (2944x1840)', 'Processeur': 'Snapdragon 870',
@@ -662,7 +678,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': False,
-        'image_url': 'https://nova.sn/42229-home_default/hp-p27-g5-moniteur-27-full-hd-ips-75hz-hdmi-displayport.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=400&fit=crop&q=80',
         'description': 'Moniteur HP P27 G5 27 pouces Full HD IPS 75Hz avec entrees HDMI et DisplayPort. Ideal pour le bureau.',
         'specifications': {
             'Taille': '27 pouces', 'Resolution': 'Full HD (1920x1080)',
@@ -720,7 +736,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': False,
-        'image_url': 'https://nova.sn/42102-home_default/samsung-tv-led-55u8072-55-smart-tv-4k-uhd.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=400&h=400&fit=crop&q=80',
         'description': 'Samsung TV LED 55 pouces 4K UHD Smart avec Crystal 4K, HDR10+ et Netflix/YouTube/Prime Video integres.',
         'specifications': {
             'Taille': '55 pouces', 'Resolution': '4K UHD (3840x2160)',
@@ -758,7 +774,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': False,
-        'image_url': 'https://nova.sn/42223-home_default/lg-70-smart-tv-4k-up7550pvd-uhd-hdr-webos-thinq-ai.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=400&h=400&fit=crop&q=80',
         'description': 'LG Smart TV 70 pouces 4K UHD avec webOS 22, ThinQ AI, Magic Remote et Dolby Vision. Experience cinema chez vous.',
         'specifications': {
             'Taille': '70 pouces', 'Resolution': '4K UHD (3840x2160)',
@@ -777,7 +793,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': False,
-        'image_url': 'https://nova.sn/42233-home_default/lg-nanocell-75nano80-75-smart-tv-4k-hdr10-webos24-ai-magic-remote.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=400&h=400&fit=crop&q=80',
         'description': 'LG NanoCell 75 pouces 4K avec technologie NanoCell pour des couleurs pures, webOS 24 et Magic Remote.',
         'specifications': {
             'Taille': '75 pouces', 'Technologie': 'NanoCell',
@@ -796,7 +812,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://nova.sn/41600-home_default/televiseur-haier-mini-led-65-pouces-4k-google-tv-h65m80fux.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=400&h=400&fit=crop&q=80',
         'description': 'Haier Mini-LED 65 pouces 4K Google TV avec contraste exceptionnel et commande vocale integree.',
         'specifications': {
             'Taille': '65 pouces', 'Technologie': 'Mini-LED',
@@ -857,7 +873,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': False,
-        'image_url': 'https://nova.sn/35808-home_default/split-lg-12000btu-anti-moustique-refroidissement-puissant.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=400&fit=crop&q=80',
         'description': 'Climatiseur LG Split 12000 BTU avec technologie Anti-Moustique, Dual Inverter et WiFi ThinQ. Classe A++.',
         'specifications': {
             'Puissance': '12 000 BTU (1.5 CV)',
@@ -878,7 +894,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': False,
-        'image_url': 'https://nova.sn/35803-home_default/split-lg-18000btu-anti-moustique-inverter-puissant.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=400&fit=crop&q=80',
         'description': 'Climatiseur LG Split 18000 BTU/h 2 CV Anti-Moustique Inverter. Ideal pour grandes pieces 25-40 m2.',
         'specifications': {
             'Puissance': '18 000 BTU (2 CV)',
@@ -899,7 +915,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': False,
-        'image_url': 'https://nova.sn/35701-home_default/split-midea-24000-btu-3-cv-gaz-410.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&h=400&fit=crop&q=80',
         'description': 'Climatiseur Midea Split 24000 BTU 3 CV Inverter Gaz R410. Solution economique et performante pour grandes surfaces.',
         'specifications': {
             'Puissance': '24 000 BTU (3 CV)',
@@ -961,7 +977,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://nova.sn/37171-home_default/fontaine-a-eau-hisense-avec-frigo-h85wdtp2s1dr.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=400&h=400&fit=crop&q=80',
         'description': 'Fontaine a eau Hisense avec refrigerateur integre (H85WDTP2S1DR). Eau fraiche et froide en permanence.',
         'specifications': {
             'Type': 'Fontaine avec frigo integre',
@@ -981,7 +997,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://nova.sn/41634-home_default/fontaine-a-eau-hisense-noir-h96wdtb3s1r-avec-refrigerateur-integre.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=400&h=400&fit=crop&q=80',
         'description': 'Fontaine a eau Hisense Noire (H96WDTB3S1R) avec refrigerateur integre. Design moderne adapte aux bureaux et maisons.',
         'specifications': {
             'Type': 'Fontaine avec frigo integre',
@@ -1209,7 +1225,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': False,
-        'image_url': 'https://nova.sn/40508-home_default/onduleur-mercury-elite-1200-pro-1200va-720w-protection-complete-et-avr.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop&q=80',
         'description': 'Onduleur Mercury Elite 1200VA/720W avec AVR (regulateur automatique), ecran LCD et protection complete contre les surtensions.',
         'specifications': {
             'Puissance': '1200 VA / 720W',
@@ -1273,7 +1289,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': False,
-        'image_url': 'https://nova.sn/37160-home_default/home-cinema-lg-1250-watt-lhd687bg-puissance-et-elegance.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=400&h=400&fit=crop&q=80',
         'description': 'Home Cinema LG 1250W (LHD687BG) systeme 5.1 avec Bluetooth, USB et lecture DVD. Son surround immersif.',
         'specifications': {
             'Puissance totale': '1250W RMS',
@@ -1293,7 +1309,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': False,
-        'image_url': 'https://nova.sn/37162-home_default/home-cinema-lg-330-watt-lhd457-son-surround-51-puissant-et-immersif.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1545454675-3531b543be5d?w=400&h=400&fit=crop&q=80',
         'description': 'Home Cinema LG LHD457 330W systeme 5.1 avec son surround immersif, USB et Bluetooth.',
         'specifications': {
             'Puissance': '330W RMS', 'Canaux': '5.1',
@@ -1396,7 +1412,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://nova.sn/42285-home_default/camera-wifi-ezviz-c7-dual-2k-double-objectif-motorisee.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&h=400&fit=crop&q=80',
         'description': 'Camera EZVIZ C7 Dual 2K+ avec double objectif motorise, detection IA et vision nocturne couleur.',
         'specifications': {
             'Resolution': '2K+ (4 MP)',
@@ -1417,7 +1433,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://nova.sn/42263-home_default/camera-solaire-ezviz-eb5-4k-sans-fil-avec-detection-ia.jpg',
+        'image_url': 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&h=400&fit=crop&q=80',
         'description': 'Camera solaire EZVIZ EB5 4K sans fil avec panneau solaire integre, detection IA et IP67.',
         'specifications': {
             'Resolution': '4K (8 MP)',
@@ -1618,9 +1634,9 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write('Creation des categories...')
         self._create_categories()
-        self.stdout.write('Creation des marques...')
+        self.stdout.write('Creation des marques + logos...')
         self._create_brands()
-        self.stdout.write('Creation des produits...')
+        self.stdout.write('Creation des produits + images...')
         self._create_products()
         self.stdout.write(self.style.SUCCESS('\nTermine !'))
 
@@ -1653,11 +1669,21 @@ class Command(BaseCommand):
             cat_data['image_url'] = image_url
 
     def _create_brands(self):
-        for name in BRANDS:
+        for b in BRANDS:
+            name = b['name']
             slug = slugify(name)
-            Brand.objects.get_or_create(
+            brand, created = Brand.objects.get_or_create(
                 slug=slug,
-                defaults={'name': name, 'is_featured': name in FEATURED_BRANDS})
+                defaults={'name': name, 'is_featured': b['is_featured']})
+            if created:
+                self.stdout.write(f'  {name}')
+            if not brand.logo and b.get('logo_url'):
+                content = download_image(b['logo_url'], f'{slug}.png')
+                if content:
+                    brand.logo.save(f'{slug}.png', content, save=True)
+                    self.stdout.write(self.style.SUCCESS(f'    Logo OK'))
+                else:
+                    self.stdout.write(self.style.WARNING(f'    Logo ECHEC : {name}'))
 
     def _create_products(self):
         for p in SAMPLE_PRODUCTS:
