@@ -35,7 +35,13 @@ export default function InscriptionPage() {
   const onSubmit = async (data: FormData) => {
     setLoading(true)
     try {
-      await register_(data)
+      await register_({
+        first_name: data.first_name,
+        last_name:  data.last_name,
+        phone:      data.phone,
+        email:      data.email,
+        password:   data.password,
+      })
       toast.success('Compte créé !')
       router.replace('/')
     } catch (err: unknown) {
