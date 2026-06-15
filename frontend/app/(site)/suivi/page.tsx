@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 
 // Metadata exportée via layout.tsx voisin (page 'use client' ne peut pas exporter metadata)
@@ -236,9 +236,9 @@ function SearchForm({ onSubmit, isLoading }: { onSubmit: (numero: string) => voi
 }
 
 /* ─────────────────────────────────────────── */
-/*  Page principale                            */
+/*  Contenu (useSearchParams requiert Suspense) */
 /* ─────────────────────────────────────────── */
-export default function SuiviPage() {
+function SuiviContent() {
   const searchParams = useSearchParams()
   const [numero, setNumero]     = useState('')
   const [searched, setSearched] = useState(false)
@@ -329,5 +329,13 @@ export default function SuiviPage() {
         </Link>
       </div>
     </div>
+  )
+}
+
+export default function SuiviPage() {
+  return (
+    <Suspense fallback={null}>
+      <SuiviContent />
+    </Suspense>
   )
 }
