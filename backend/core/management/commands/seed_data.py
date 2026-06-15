@@ -115,7 +115,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip6.jpg',
         'description': 'Samsung Galaxy Z Flip 6 pliable avec ecran Dynamic AMOLED 6.7 pouces, Snapdragon 8 Gen 3, 12 Go RAM et appareil photo 50 MP.',
         'specifications': {
             'Ecran': '6.7 pouces Dynamic AMOLED 2X 120Hz (pliable)',
@@ -137,7 +137,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g-sm-s928-stylus.jpg',
         'description': 'Samsung Galaxy S24 Ultra avec stylet S Pen integre, appareil photo 200 MP et intelligence artificielle Galaxy AI.',
         'specifications': {
             'Ecran': '6.8 pouces Dynamic AMOLED 2X 120Hz',
@@ -159,7 +159,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55.jpg',
         'description': 'Samsung Galaxy A55 5G avec ecran Super AMOLED 6.6 pouces 120Hz, triple camera 50 MP et batterie 5000 mAh.',
         'specifications': {
             'Ecran': '6.6 pouces Super AMOLED 120Hz',
@@ -180,7 +180,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15.jpg',
         'description': 'iPhone 15 avec puce A16 Bionic, Dynamic Island, appareil photo 48 MP et port USB-C pour la premiere fois.',
         'specifications': {
             'Ecran': '6.1 pouces Super Retina XDR OLED',
@@ -202,7 +202,7 @@ SAMPLE_PRODUCTS = [
         'status': 'low_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-15-pro.jpg',
         'description': 'iPhone 15 Pro en titane avec puce A17 Pro, bouton Action programmable, appareil photo Pro 48 MP et zoom optique 3x.',
         'specifications': {
             'Ecran': '6.1 pouces Super Retina XDR ProMotion 120Hz',
@@ -224,7 +224,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/pics/huawei/huawei-nova-12-se-1.jpg',
         'description': 'Huawei Nova 12 SE avec appareil photo 108 MP, ecran OLED 6.67 pouces et charge rapide 100W.',
         'specifications': {
             'Ecran': '6.67 pouces OLED 90Hz',
@@ -245,7 +245,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-13-pro.jpg',
         'description': 'Xiaomi Redmi Note 13 Pro avec appareil photo 200 MP, ecran AMOLED 6.67 pouces 120Hz et charge 67W.',
         'specifications': {
             'Ecran': '6.67 pouces AMOLED 120Hz',
@@ -266,7 +266,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1567581935884-3349723552ca?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/xiaomi-a3x-new.jpg',
         'description': 'Redmi A3x : smartphone economique avec ecran 6.71 pouces et batterie 5000 mAh longue duree.',
         'specifications': {
             'Ecran': '6.71 pouces HD+', 'Processeur': 'Helio G36',
@@ -285,7 +285,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/tecno-pop9-5g.jpg',
         'description': 'Tecno POP 9 avec ecran 6.67 pouces HD+ 90Hz, appareil photo IA et batterie 5000 mAh. Meilleur rapport qualite/prix.',
         'specifications': {
             'Ecran': '6.67 pouces HD+ 90Hz', 'Processeur': 'Helio A22',
@@ -304,7 +304,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/tecno-spark-30c.jpg',
         'description': 'Tecno Spark 30c 128 Go avec ecran AMOLED 6.6 pouces 90Hz, Helio G85 et charge 18W.',
         'specifications': {
             'Ecran': '6.6 pouces AMOLED 90Hz', 'Processeur': 'Helio G85',
@@ -323,7 +323,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/infinix-hot-40-pro.jpg',
         'description': 'Infinix Hot 40 Pro avec ecran AMOLED 6.78 pouces 120Hz, Helio G99 et triple camera 108 MP.',
         'specifications': {
             'Ecran': '6.78 pouces AMOLED 120Hz',
@@ -344,7 +344,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': False,
-        'image_url': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/itel-a70.jpg',
         'description': 'itel A70 smartphone entree de gamme avec grand ecran 6.6 pouces, batterie longue duree 5000 mAh et stockage 128 Go.',
         'specifications': {
             'Ecran': '6.6 pouces HD+ 90Hz',
@@ -365,7 +365,7 @@ SAMPLE_PRODUCTS = [
         'status': 'low_stock',
         'is_featured': False,
         'is_new': False,
-        'image_url': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/sony-xperia-5-v.jpg',
         'description': 'Sony Xperia 5 V compact avec ecran OLED 6.1 pouces 120Hz, Snapdragon 8 Gen 2 et appareil photo Sony Zeiss 48 MP.',
         'specifications': {
             'Ecran': '6.1 pouces FHD+ OLED 120Hz HDR',
@@ -493,7 +493,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://nova.sn/41278-home_default/lenovo-ideapad-slim-3-pc-portable-14-core-i5-16-go-ram-512-go-ssd.jpg',
         'description': 'Lenovo IdeaPad Slim 3 14 pouces avec Intel Core i5, 16 Go RAM et SSD 512 Go. Ultra-fin et performant pour travail et etudes.',
         'specifications': {
             'Ecran': '14 pouces FHD IPS', 'Processeur': 'Intel Core i5 (12e gen)',
@@ -594,7 +594,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/lenovo-yoga-tab-plus.jpg',
         'description': 'Lenovo Yoga Tab Plus 12.7 pouces ecran 3K, 16 Go RAM, 256 Go, avec clavier et stylet inclus. La tablette pro ultime.',
         'specifications': {
             'Ecran': '12.7 pouces 3K (2944x1840)', 'Processeur': 'Snapdragon 870',
@@ -637,7 +637,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-a9-plus.jpg',
         'description': 'Samsung Galaxy Tab A9+ 5G avec grand ecran 11 pouces FHD+, Snapdragon 695 et 8 haut-parleurs Dolby Atmos.',
         'specifications': {
             'Ecran': '11 pouces FHD+ 90Hz',
@@ -736,7 +736,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': False,
-        'image_url': 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://nova.sn/43293-home_default/samsung-tv-43-pouces-crystal-uhd-4k-smart-tv-ua43bu8000.jpg',
         'description': 'Samsung TV LED 55 pouces 4K UHD Smart avec Crystal 4K, HDR10+ et Netflix/YouTube/Prime Video integres.',
         'specifications': {
             'Taille': '55 pouces', 'Resolution': '4K UHD (3840x2160)',
@@ -774,7 +774,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': False,
-        'image_url': 'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://nova.sn/43270-home_default/tv-lg-uhd-ut73-55-4k-smart-tv-hdr10-pro-webos24-55ut80.jpg',
         'description': 'LG Smart TV 70 pouces 4K UHD avec webOS 22, ThinQ AI, Magic Remote et Dolby Vision. Experience cinema chez vous.',
         'specifications': {
             'Taille': '70 pouces', 'Resolution': '4K UHD (3840x2160)',
@@ -793,7 +793,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': False,
-        'image_url': 'https://images.unsplash.com/photo-1593359677879-a4bb92f4834c?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://nova.sn/43264-home_default/televiseur-lg-75-smart-4k-75ut80006la.jpg',
         'description': 'LG NanoCell 75 pouces 4K avec technologie NanoCell pour des couleurs pures, webOS 24 et Magic Remote.',
         'specifications': {
             'Taille': '75 pouces', 'Technologie': 'NanoCell',
@@ -977,7 +977,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://nova.sn/41632-home_default/fontaine-a-eau-hisense-gris-avec-refrigerateur-integre.jpg',
         'description': 'Fontaine a eau Hisense avec refrigerateur integre (H85WDTP2S1DR). Eau fraiche et froide en permanence.',
         'specifications': {
             'Type': 'Fontaine avec frigo integre',
@@ -997,7 +997,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://nova.sn/41634-home_default/fontaine-a-eau-hisense-noir-h96wdtb3s1r-avec-refrigerateur-integre.jpg',
         'description': 'Fontaine a eau Hisense Noire (H96WDTB3S1R) avec refrigerateur integre. Design moderne adapte aux bureaux et maisons.',
         'specifications': {
             'Type': 'Fontaine avec frigo integre',
@@ -1497,7 +1497,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': True,
         'is_new': True,
-        'image_url': 'https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://nova.sn/35796-home_default/ps5-slim-digital-edition-gaming-en-4k-hdr-et-audio-3d.jpg',
         'description': 'PlayStation 5 Slim avec lecteur detachable en option, SSD 1 To et design 30% plus compact.',
         'specifications': {
             'Stockage': 'SSD 1 To',
@@ -1600,7 +1600,7 @@ SAMPLE_PRODUCTS = [
         'status': 'in_stock',
         'is_featured': False,
         'is_new': False,
-        'image_url': 'https://images.unsplash.com/photo-1583394293214-0c61e7d5f9fe?w=400&h=400&fit=crop&q=80',
+        'image_url': 'https://nova.sn/41495-home_default/casque-sans-fil-sony-pulse-3d-ps5-audio-3d-officiel-playstation.jpg',
         'description': 'Casque sans fil Sony PULSE 3D PS5 avec Tempest 3D Audio, double microphone et 12h autonomie.',
         'specifications': {
             'Compatibilite': 'PlayStation 5, PlayStation 4',
