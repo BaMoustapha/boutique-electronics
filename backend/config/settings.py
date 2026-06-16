@@ -207,8 +207,8 @@ EMAIL_USE_TLS     = os.getenv('EMAIL_USE_TLS', 'True') == 'True'
 EMAIL_HOST_USER   = os.getenv('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
 
-# TEMP DEBUG — sans ceci, les 500 (DEBUG=False) ne logguent que la ligne d'accès
-# gunicorn ; le traceback part vers mail_admins (non configuré) et disparaît.
+# Sans ceci, les 500 (DEBUG=False) ne logguent que la ligne d'accès gunicorn ;
+# le traceback part vers mail_admins (non configuré) et disparaît silencieusement.
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
