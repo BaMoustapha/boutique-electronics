@@ -118,6 +118,13 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 CSRF_TRUSTED_ORIGINS = [f'https://{RENDER_HOSTNAME}'] if RENDER_HOSTNAME else []
+CSRF_TRUSTED_ORIGINS.append('https://boutique-electronics-2.onrender.com')
+
+# Render termine le TLS sur son proxy et transmet en HTTP interne — sans ceci,
+# Django croit que la requête n'est pas sécurisée et le contrôle CSRF (Origin
+# vs Host/scheme) échoue sur tout POST admin (login, sauvegarde...).
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
