@@ -31,7 +31,7 @@ const inputClass = 'w-full border border-border rounded-lg px-3 py-2.5 text-sm f
 export default function CommanderPage() {
   const router = useRouter()
   const { items, totalPrice, totalItems, clear } = useCart()
-  const { mutate: createOrder, isPending, isSuccess, data: order } = useCreateOrder()
+  const { mutate: createOrder, isPending, isSuccess, isError, data: order } = useCreateOrder()
 
   const {
     register,
@@ -60,15 +60,18 @@ export default function CommanderPage() {
   }
 
   const onSubmit = (data: FormData) => {
-    createOrder({
-      customer_name:    data.customer_name,
-      customer_phone:   data.customer_phone,
-      customer_email:   data.customer_email || '',
-      delivery_zone:    data.delivery_zone,
-      delivery_address: data.delivery_address,
-      note:             data.note || '',
-      items: items.map((i) => ({ product_id: i.product.id, quantity: i.quantity })),
-    })
+    createOrder(
+      {
+        customer_name:    data.customer_name,
+        customer_phone:   data.customer_phone,
+        customer_email:   data.customer_email || '',
+        delivery_zone:    data.delivery_zone,
+        delivery_address: data.delivery_address,
+        note:             data.note || '',
+        items: items.map((i) => ({ product_id: i.product.id, quantity: i.quantity })),
+      },
+      { onError: () => notify.orderError() }
+    )
   }
 
   return (
@@ -197,6 +200,12 @@ export default function CommanderPage() {
               <><CheckCircle size={20} /> Confirmer la commande</>
             )}
           </button>
+
+          {isError && (
+            <p className="text-danger text-sm text-center font-medium">
+              Échec de l'envoi de la commande. Vérifiez vos informations et réessayez.
+            </p>
+          )}
 
           <p className="text-xs text-text-muted text-center">
             Paiement à la livraison · Nous vous contacterons pour confirmer
