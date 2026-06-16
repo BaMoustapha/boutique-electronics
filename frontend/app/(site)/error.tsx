@@ -22,11 +22,6 @@ export default function SiteError({
       <p className="text-sm text-[#868E96] mb-6 max-w-sm">
         Quelque chose s'est mal passé. Réessayez ou retournez à l'accueil.
       </p>
-      {/* TEMP DEBUG — à retirer une fois la cause identifiée */}
-      <pre className="text-[11px] text-left bg-[#1A1A2E] text-white/80 rounded-lg p-3 mb-6 max-w-md overflow-auto whitespace-pre-wrap">
-        {error.message}
-        {error.digest && `\ndigest: ${error.digest}`}
-      </pre>
       <div className="flex gap-3">
         <button
           onClick={reset}
