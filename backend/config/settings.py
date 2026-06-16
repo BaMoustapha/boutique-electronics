@@ -140,8 +140,20 @@ if CLOUDINARY_CLOUD_NAME:
         'CLOUD_NAME': CLOUDINARY_CLOUD_NAME,
         'API_KEY': os.getenv('CLOUDINARY_API_KEY', ''),
         'API_SECRET': os.getenv('CLOUDINARY_API_SECRET', ''),
+        'SECURE': True,
     }
     STORAGES['default']['BACKEND'] = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+    # CloudinaryField (utilisé par FlexImageField) lit la config globale du SDK
+    # `cloudinary`, pas CLOUDINARY_STORAGE — sans ceci, .url renvoie http:// et
+    # Next.js (qui n'autorise que https pour res.cloudinary.com) bloque l'image.
+    import cloudinary
+    cloudinary.config(
+        cloud_name=CLOUDINARY_CLOUD_NAME,
+        api_key=os.getenv('CLOUDINARY_API_KEY', ''),
+        api_secret=os.getenv('CLOUDINARY_API_SECRET', ''),
+        secure=True,
+    )
 
 # Django REST Framework
 REST_FRAMEWORK = {
